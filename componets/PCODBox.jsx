@@ -8,10 +8,11 @@ import {
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
-export default () => {
+export default ({navigation}) => {
   return (
     <>
       <View style={{}}>
+        <Pressable  onPress={() => navigation.navigate("pcodPage")}>
         <LinearGradient
           colors={["#f7f7f7", "#faaaeb"]} // Define the gradient colors
           start={{ x: 0, y: 1 }}
@@ -45,6 +46,7 @@ export default () => {
             <Text>more...</Text>
           </View>
         </LinearGradient>
+        </Pressable>
       </View>
     </>
   );

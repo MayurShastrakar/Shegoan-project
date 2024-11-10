@@ -13,11 +13,12 @@ import { Ionicons } from '@expo/vector-icons';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 // import { LinearGradient } from "expo-linear-gradient";
 
-const Navbar = () => {
+const Navbar = ({navigation}) => {
   return (
     <>
+      <View style={{}}>
       <View style={styles.bottomNavbar}>
-        <Pressable style={styles.navbarItem} onPress={() => alert("Home")}>
+        <Pressable style={styles.navbarItem} onPress={() => navigation.navigate("home")} >
         <FontAwesome name="user-circle" size={40} color="black" style={{color:'#c7c5c7',}} />
           <Text style={styles.navbarText}>Profile</Text>
         </Pressable>
@@ -30,6 +31,7 @@ const Navbar = () => {
         <Pressable style={styles.navbarItem} onPress={() => alert("Profile")}>
           <Text style={styles.navbarText}>I am {"\n"}Feeling</Text>
         </Pressable>
+      </View>
       </View>
     </>
   );
@@ -45,12 +47,13 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingVertical: 10,
+    paddingVertical: 5,
     elevation: 5, // Shadow for Android
     borderTopColor:"#e6e3e6",
     borderTopWidth:2,
     paddingLeft:20,
     paddingRight:20,
+    paddingBottom:30
   },
   navbarItem: {
     alignItems: "center",

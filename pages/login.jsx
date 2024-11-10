@@ -13,13 +13,16 @@ const login = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      {/* <ImageBackground source={{ uri: 'https://www.bootdey.com/image/280x280/9370DB/9370DB' }} style={styles.backgroundImage}> */}
+      <ImageBackground source={require("../assets/LoginBgW.png")} style={styles.backgroundImage}>
         <View >
-            <Text style={styles.textinput1}>Login</Text>
-            <Text style={styles.textinput2}>Sign in to Continue</Text>
+        <Text style={{textAlign:'center', fontSize:40,fontWeight:900,paddingVertical:0, marginTop:0}}>Login</Text>
+        <Text style={styles.textinput2}>Sign in to Continue</Text>
+            {/* <Text style={styles.textinput1}>Login</Text>
+            <Text style={styles.textinput2}>Sign in to Continue</Text> */}
           {/* <Image source={{ uri: 'https://bootdey.com/img/Content/avatar/avatar3.png' }} style={styles.logo} /> */}
         </View>
         <View style={styles.formContainer}>
+        
           <View style={styles.card}>
             <TextInput
               placeholder="Email"
@@ -45,7 +48,7 @@ const login = ({ navigation }) => {
           <Text style={styles.textinput2}>Sign up</Text>
           </View>
         </View>
-      {/* </ImageBackground> */}
+      </ImageBackground>
     </View>
   );
 };
@@ -54,15 +57,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    padding:1,
+    marginTop:10,
   },
   backgroundImage: {
     flex: 1,
     resizeMode: 'cover',
+    marginTop:100
   },
-  logoContainer: {
-    alignItems: 'center',
-    marginTop: 160,
-  },
+ 
   logo: {
     width: 120,
     height: 120,
@@ -71,9 +74,9 @@ const styles = StyleSheet.create({
   formContainer: {
     marginHorizontal: 20,
     marginTop: 50,
-    paddingVertical:100,
+    paddingVertical:10,
     padding:20,
-    borderRadius:50,
+    borderRadius:20,
     backgroundColor:'#fff'
   },
   textinput1:{

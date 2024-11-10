@@ -6,6 +6,8 @@ import login from './pages/login';
 import Navbar from './componets/Navbar';
 import home from './pages/home';
 import MyCalendar from './pages/MyCalendar';
+import BodyType from './componets/BodyType';
+import PCODPage from './pages/PCODPage';
 
 const Stack = createNativeStackNavigator();
 
@@ -26,13 +28,13 @@ export default function App() {
               // headerLeft: () => <CustomMenuIcon />, // Custom menu icon
             }}
           >
-            {/* <Stack.Screen
+            <Stack.Screen
               name="login"
               component={login}
               options={{
                 headerShown: false,
               }}
-            /> */}
+            />
             <Stack.Screen
               name="home"
               component={home}
@@ -47,8 +49,22 @@ export default function App() {
                 headerShown: false,
               }}
             />
+            <Stack.Screen
+              name="bodyType"
+              component={BodyType}
+              options={{
+                headerShown: false,
+              }}
+            />
+            <Stack.Screen
+              name="pcodPage"
+              component={PCODPage}
+              options={{
+                headerShown: false,
+              }}
+            />
             </Stack.Navigator>
-            <Navbar/>
+            {/* <Navbar/> */}
     </NavigationContainer>
    
   );

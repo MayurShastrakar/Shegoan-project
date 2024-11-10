@@ -134,7 +134,7 @@ const home = ({ navigation }) => {
                     // icon={"check"}
                     // mode="contained"
                     // theme={theme}
-                    onPress={() => alert("Button Clicked")}
+                    onPress={() =>  navigation.navigate("bodyType")}
                     style={{
                       backgroundColor: "#b57da5",
                       width: 100,
@@ -173,7 +173,7 @@ const home = ({ navigation }) => {
           {/* Add more <ArticlesBox /> components as needed */}
         </ScrollView>
         {/* here is PCODBox  */}
-        <PCODBox />
+        <PCODBox navigation={navigation} />
 
         {/* Information BOX */}
         <View style={{}}>
@@ -214,7 +214,7 @@ const home = ({ navigation }) => {
       </ScrollView>
 
       {/* Navbar */}
-      <Navbar />
+      <Navbar navigation={navigation}/>
     </View>
   );
 };

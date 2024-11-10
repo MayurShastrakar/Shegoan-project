@@ -13,7 +13,7 @@ const login = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <ImageBackground source={{ uri: 'https://www.bootdey.com/image/280x280/9370DB/9370DB' }} style={styles.backgroundImage}>
+      {/* <ImageBackground source={{ uri: 'https://www.bootdey.com/image/280x280/9370DB/9370DB' }} style={styles.backgroundImage}> */}
         <View >
             <Text style={styles.textinput1}>Login</Text>
             <Text style={styles.textinput2}>Sign in to Continue</Text>
@@ -45,7 +45,7 @@ const login = ({ navigation }) => {
           <Text style={styles.textinput2}>Sign up</Text>
           </View>
         </View>
-      </ImageBackground>
+      {/* </ImageBackground> */}
     </View>
   );
 };
